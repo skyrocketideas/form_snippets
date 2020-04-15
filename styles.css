@@ -1,0 +1,79 @@
+* {
+	box-sizing: border-box;
+	/* margin: 0; */
+	/* padding: 0; */
+	line-height: 1rem;
+}
+
+h2,
+h3 {
+	font-family: "Courier New", Courier, monospace;
+	margin-bottom: 0.2rem;
+}
+
+article {
+	margin: 2rem 2rem;
+	border: 1px solid goldenrod;
+	padding: 1rem;
+}
+
+#email:invalid {
+	border: 10px solid pink;
+}
+
+#summary:invalid {
+	border: 10px solid greenyellow;
+}
+
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+select {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.select-wrapper {
+	position: relative;
+}
+
+.select-wrapper::after {
+	content: "▼";
+	font-size: 1rem;
+	top: 6px;
+	right: 10px;
+	position: absolute;
+}
+
+input[type="checkbox"] {
+	position: relative;
+	width: 1em;
+	height: 1em;
+	border: 1px solid gray;
+	/* Adjusts the position of the checkboxes on the text baseline */
+	vertical-align: -2px;
+	/* Set here so that Windows' High-Contrast Mode can override */
+	color: green;
+}
+
+input[type="checkbox"]::before {
+	content: "✔";
+	position: absolute;
+	font-size: 1.2em;
+	right: -1px;
+	top: -0.3em;
+	visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+	/* Use `visibility` instead of `display` to avoid recalculating layout */
+	visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+	border-color: black;
+	background: #ddd;
+	color: gray;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form Snippet Library</title>
+		<!-- <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.min.css"
+		/> -->
+		<link rel="stylesheet" href="styles.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/prism.min.js"></script>
+	</head>
+	<body>
+		<h1>Form Snippet Library</h1>
+
+		<h2>Input</h2>
+		<!-- form -->
+		<article class="example">
+			<h3>form</h3>
+			<p>
+				The HTML element represents a document section containing interactive controls for submitting information.
+				"Action" points to where the data should be submitted.
+			</p>
+			<form action="#" method="post">
+				<label for="name">Name</label>
+				<input type="email" name="name" id="name" placeholder="email goes here" />
+				<button>Send</button>
+			</form>
+		</article>
+
+		<!-- <input type="radio"> -->
+		<article class="example">
+			<h3>type="radio"</h3>
+			<p>Turns the input into a radio button. All radio buttons should have the same "name=".</p>
+			<p>Use "fieldset" to group elements together - must always have a "legend".</p>
+			<p>Value should be unique to each input in the group.</p>
+			<fieldset>
+				<legend>Choose your preferred fruit</legend>
+				<input type="radio" id="apples" name="fruit" value="apples" />
+				<label for="apples">Apples</label><br />
+				<input type="radio" id="oranges" name="fruit" value="oranges" />
+				<label for="oranges">Oranges</label><br />
+			</fieldset>
+		</article>
+
+		<!-- <input type="checkbox"> -->
+		<article class="example">
+			<h3>type="checkbox"</h3>
+			<p>
+				"input" elements of type checkbox are rendered by default as boxes that are checked when activated.
+			</p>
+			<p>A checkbox allows you to select single values for submission in a form (or not).</p>
+			<form>
+				<fieldset>
+					<legend>Choose your weapon</legend>
+					<input type="checkbox" id="axe" name="weapon" value="axe" />
+					<label for="axe">axe</label>
+					<input type="checkbox" id="sword" name="weapon" value="sword" />
+					<label for="sword">sword</label>
+					<input type="checkbox" id="other" name="weapon" value="other" />
+					<label for="other">other</label>
+					<input type="text" id="otherValue" name="other" />
+					<button type="submit">Submit form</button>
+				</fieldset>
+			</form>
+		</article>
+
+		<!-- <input type="email" -->
+		<article class="example">
+			<h3>type="email"</h3>
+			<p>
+				"input" elements of type email are used to let the user enter and edit an e-mail address, or, if the multiple
+				attribute is specified, a list of e-mail addresses.
+			</p>
+			<label for="email">Enter your email</label>
+			<input type="email" id="email" pattern=".+@google.com" size="30" required />
+		</article>
+
+		<!-- <input type="select" -->
+		<article class="example">
+			<h3>type="select"</h3>
+			<p>The HTML "select" element represents a control that provides a menu of options.</p>
+			<label for="beer">Choose a beer</label>
+			<div class="select-wrapper">
+				<select name="select" id="select">
+					<option value="" selected>Choose one</option>
+					<option value="pilsner">pilsner</option>
+					<option value="ale">ale</option>
+					<option value="stout">stout</option>
+				</select>
+			</div>
+		</article>
+
+		<!-- <textarea> -->
+		<article class="example">
+			<h3>textarea</h3>
+			<p>
+				The HTML "textarea" element represents a multi-line plain-text editing control, useful when you want to allow
+				users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.
+			</p>
+			<label for="summary">Please give us a summary</label>
+			<textarea
+				name="textarea"
+				id="summary"
+				cols="30"
+				rows="10"
+				minlength="10"
+				placeholder="Write a summary ..."
+			></textarea>
+		</article>
+
+		<!-- <optgroup> -->
+		<article class="example">
+			<h3>optgroup</h3>
+			<p>The HTML "optgroup" element creates a grouping of options within a "select" element.</p>
+			<form action="#" method="post">
+				<label for="car-select">Choose a car</label>
+				<select name="cars" id="car-select">
+					<optgroup label="Cool cars">
+						<option value="mercedes">mercedes</option>
+						<option value="ferrari">ferrari</option>
+					</optgroup>
+					<optgroup label="shit cars">
+						<option value="skoda">skoda</option>
+						<option value="trabant">trabant</option>
+					</optgroup>
+				</select>
+			</form>
+		</article>
+
+		<!-- <datalist> -->
+		<article class="example">
+			<h3>datalist</h3>
+			<p>
+				The HTML "datalist" element contains a set of "option" elements that represent the permissible or recommended
+				options available to choose from within other controls.
+			</p>
+			<label for="shoe-choice">Choose a shoe</label>
+			<input list="shoe-types" id="shoe-choice" name="shoe-choice" type="text" />
+			<datalist id="shoe-types">
+				<option value="clogs">clogs</option>
+				<option value="sneakers">sneakers</option>
+				<option value="boots">boots</option>
+			</datalist>
+		</article>
+
+		<!-- <progress> -->
+		<article class="example">
+			<h3>progress</h3>
+			<p>
+				The HTML "progress" element displays an indicator showing the completion progress of a task, typically displayed
+				as a progress bar.
+			</p>
+			<label for="file">File progress</label>
+			<progress id="file" max="100" value="70">70%</progress>
+		</article>
+
+		<!-- if you need to show copy-pastable code, you can use the following-->
+		<!-- <pre><code class="language-html"><input type=""></code></pre> -->
+		<script src="index.js"></script>
+	</body>
+</html>
